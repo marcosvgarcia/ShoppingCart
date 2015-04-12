@@ -1,6 +1,8 @@
 
 class ShoppingCart
 
+	attr_accessor :cart
+
 	def initialize(cart)
 	@cart = cart
 	end
@@ -16,7 +18,7 @@ class ShoppingCart
 	return name.times * price
 	end
 
-	def Cart_Total_Price(Fruit_Total_Price)
+	def Cost(Fruit_Total_Price)
 	puts (Fruit_Total_Price).reduce(:+)
 end
 
@@ -26,3 +28,9 @@ orange = Fruit.new(orange, 5)
 grapes = Fruit.new(grapes, 15)
 banana = Fruit.new(banana, 20)
 watermelon = Fruit.new(watermelon, 50)
+
+cart = ShoppingCart.new
+
+cart.add :apple
+cart.add :banana
+cart.add :banana
